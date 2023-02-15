@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\RecipesList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/recipes', RecipesList::class)->name('recipes');
 
 Route::middleware([
     'auth:sanctum',
